@@ -1,0 +1,10 @@
+[  693.466801] audit: type=1400 audit(1467766861.710:10): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=740 comm="apparmor_parser"
+[  693.467776] audit: type=1400 audit(1467766861.710:11): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=740 comm="apparmor_parser"
+[ 1667.439081] init: upstart-udev-bridge main process (263) terminated with status 1
+[ 1667.439092] init: upstart-udev-bridge main process ended, respawning
+[ 1667.439202] init: upstart-file-bridge main process (411) terminated with status 1
+[ 1667.439209] init: upstart-file-bridge main process ended, respawning
+[ 1667.439306] init: upstart-socket-bridge main process (469) terminated with status 1
+[ 1667.439315] init: upstart-socket-bridge main process ended, respawning
+[ 1677.466542] init: systemd-logind main process (534) killed by TERM signal
+[ 1696.803910] systemd-udevd[9453]: starting version 204
