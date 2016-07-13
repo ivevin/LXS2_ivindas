@@ -1,0 +1,139 @@
+    1  p
+    2  sudo su
+    3  sudo
+    4  sudo su
+    5  clear
+    6  pwd
+    7  cd /home/sysadmin/LXS2_ivindas/
+    8  ls
+    9  cd history/
+   10  ls
+   11  cat history_12072016_ubn002 
+   12  cat history_05072016 
+   13  clear
+   14  git clone https://github.com/emvarg/LXS2_evargas.git
+   15  ls
+   16  cd LXS2_evargas/history/
+   17  ls
+   18  cd ..
+   19  ls
+   20  git status
+   21  sudo rm -r LXS2_evargas/
+   22  ls
+   23  git status
+   24  history 
+   25  cat history_05072016 
+   26  ls
+   27  cd ..
+   28  ls
+   29  cd tareas/
+   30  ls
+   31  cat file1 
+   32  cd
+   33  sudo su
+   34  sudo apt-get install git
+   35  cleaer
+   36  git clone https://github.com/ivevin/LXS2_ivindas.git
+   37  ls
+   38  cd LXS2_ivindas/
+   39  ls
+   40  cd history/
+   41  ls
+   42  sudo apt-get install tree
+   43  tree
+   44  cd ..
+   45  tree
+   46  cd LXS2_ivindas/history/
+   47  ls
+   48  history > history_12072016_$HOSTNAME 
+   49  ls -l
+   50  pwd
+   51  git status
+   52  git add history_12072016_ubn002 
+   53  git status
+   54  git commit -m "History de la clase de LVM parte 1"
+   55  git config --global user.email ivettevindas@hotmail.com
+   56  git config --global user.name "Ivette"
+   57  git commit -m "History de la clase de LVM parte 1"
+   58  pwd
+   59  git push origin master
+   60  cat history_12072016_ubn002 
+   61  sudo su
+   62  ls -l
+   63  rm history_12072016_ubn002 
+   64  ls -l
+   65  ls
+   66  ls -l
+   67  clear
+   68  history
+   69  id
+   70  #sudo usermode -a -G libvirtd sysadmin
+   71  #este comando no se ejecuto porque ubuntu lo hizo automaticamente, en sistemas como centos hay que hacerlo
+   72  sudo apt-get install qemu-system
+   73  sudo su
+   74  ls
+   75  cd LXS2_ivindas/
+   76  mkdir scripts
+   77  cd scripts/
+   78  vim TMP_vir.sh
+   79  sudo apt-get install vim
+   80  sudo su
+   81  ls
+   82  cd /tmp/
+   83  LS -L
+   84  ls -l
+   85  cd dev/LXS2_evargas/
+   86  ls
+   87  cd scripts/
+   88  ls
+   89  cp -a TMP_vir.sh /home/sysadmin/LXS2_ivindas/scripts/
+   90  cd
+   91  ls
+   92  cd LXS2_ivindas/scripts/
+   93  ls
+   94  vim TMP_vir.sh 
+   95  git add TMP_vir.sh 
+   96  git status
+   97  git commit -m "Agregar script"
+   98  git push origin master
+   99  cat TMP_vir.sh
+  100  vim TMP_vir.sh 
+  101  cd /tmp/dev/LXS2_evargas/
+  102  ls
+  103  git log
+  104  git pull origin master
+  105  ls
+  106  ls -k
+  107  ls -l
+  108  sudo chown sysadmin:sysadmin -R /tmp/dev/LXS2_evargas/
+  109  ls -l
+  110  git pull origin master
+  111  cd scripts/
+  112  ls
+  113  cp -a cnts00.sh /home/sysadmin/LXS2_ivindas/scripts/
+  114  cd /home/sysadmin/LXS2_ivindas/scripts/
+  115  ls -l
+  116  git add cnts00.sh 
+  117  git status
+  118  git commit -m "agregar script para crear VM Centos"
+  119  git push origin master
+  120  ls -l
+  121  chmod 755 cnts00.sh 
+  122  ./cnts00.sh 
+  123  mkdir -p /srv/servidores
+  124  sudp mkdir -p /srv/servidores
+  125  sudo mkdir -p /srv/servidores
+  126  ./cnts00.sh 
+  127  ls -l/srv/servidores
+  128  ls -l /srv/servidores
+  129  ls -l /srv/
+  130  ./cnts00.sh
+  131  ls /srv/
+  132  ./cnts00.sh
+  133  ls /home/sysadmin/Downloads/
+  134  ./cnts00.sh
+  135  sudo ./cnts00.sh
+  136  cd ..
+  137  git status
+  138  cd history/
+  139  history > history_12072016_ubn002
