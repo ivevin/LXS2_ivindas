@@ -1,19 +1,51 @@
-    1  p
-    2  sudo su
-    3  sudo
-    4  sudo su
-    5  sudo apt-get install git
-    6  cleaer
-    7  git clone https://github.com/ivevin/LXS2_ivindas.git
-    8  ls
-    9  cd LXS2_ivindas/
-   10  ls
-   11  cd history/
-   12  ls
-   13  sudo apt-get install tree
-   14  tree
-   15  cd ..
-   16  tree
-   17  cd LXS2_ivindas/history/
-   18  ls
-   19  history > history_12072016_$HOSTNAME 
+    1  fdisk -l
+    2  fdisk -l
+    3  netstat -ltunpa
+    4  apt-get install openssh
+    5  apt-get install openssh-server
+    6  netstat -ltunpa
+    7  netstat -ltunpa | grep LISTEN
+    8  apt-get install nmap
+    9  ip -4 addr
+   10  nmap 10.124.18.141
+   11  nmap 10.124.18.129
+   12  nmap 127.0.1.1
+   13  nmap localhost
+   14  cat /etc/hosts
+   15  man lvm
+   16  cd
+   17  fdisk -l
+   18  fdisk /dev/sda
+   19  reboot 
+   20  fdisk -l
+   21  apt-get install lvm2
+   22  pvcreate /dev/sda7
+   23  pvdisplay
+   24  pvcreate /dev/sda{8,9,10}
+   25  pvdisplay
+   26  vgcreate server01 /dev/sda7
+   27  vgdisplay 
+   28  vgcreate -s 16M server02 /dev/sda8 /dev/sda9
+   29  vgdisplay 
+   30  history 
+   31  vgextend server01 /dev/sda10
+   32  vgdisplay 
+   33  lvcreate man
+   34  lvcreate -L 500M -n data01 server01
+   35  lvcreate -L 200M server01
+   36  mkfs.ext4 /dev/server01/data01 
+   37  cd /mnt/
+   38  mkdir respaldos
+   39  mount /dev/server01/data01 /mnt/respaldos/
+   40  df
+   41  mount
+   42  init 0
+   43  git clone https://github.com/ivevin/LXS2_ivindas.git
+   44  ls
+   45  cd LXS2_ivindas/
+   46  ls
+   47  cd history/
+   48  ls
+   49  rm history_12072016_ubn002 
+   50  history 
+   51  history > history_12072016_$HOSTNAME
