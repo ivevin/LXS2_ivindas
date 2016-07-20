@@ -1,0 +1,117 @@
+    1  sudo su
+    2  exit
+    3  sudo su
+    4  git config --global user.email "ivettevindas@hotmail.com"
+    5  ls
+    6  ls -al
+    7  cat .gitconfig 
+    8  ls
+    9  pwd
+   10  mkdir LXS2
+   11  ls
+   12  cd LXS2/
+   13  mkdir tareas
+   14  mkdir src
+   15  mkdir misc
+   16  ls
+   17  sudo apt-get install tree
+   18  pwd
+   19  tree
+   20  touch misc/file1
+   21  touch src/file1
+   22  touch tareas/file1
+   23  tree
+   24  sudo apt-get install imax
+   25  sudo apt-get install emacs
+   26  ls
+   27  emacs misc/file1 
+   28  vim .gitignore
+   29  tree
+   30  cat .gitignore 
+   31  git init
+   32  ls -la
+   33  tree .git
+   34  git status
+   35  git add misc/
+   36  git add src/
+   37  git add tareas/
+   38  git add .gitignore 
+   39  tree .git
+   40  git status
+   41  touch misc/.#file1
+   42  git status
+   43  git add misc/file2
+   44  git status
+   45  git commit -m "Commit inicial del arbol de desarrollo"
+   46  ls misc/
+   47  ls -al misc/
+   48  rm misc/.#file1 
+   49  git status
+   50  git commit -m "Commit inicial del arbol de desarrollo"
+   51  git remove misc/.#file1
+   52  git delete misc/.#file1
+   53  git status
+   54  git rm misc/.#file1 
+   55  git status
+   56  git commit -m "Commit inicial del arbol de desarrollo"
+   57  git 
+   58  git status
+   59  git log 
+   60  dmesg 
+   61  dmesg | less 
+   62  dmesg | tail 
+   63  dmesg | tail > misc/file1
+   64  cat misc/file1
+   65  dmesg | tail > misc/file2
+   66  ls
+   67  cd LXS2/
+   68  dmesg | tail > misc/file2
+   69  git add misc/
+   70  git status
+   71  ls -al misc/
+   72  git rm misc/#file1# 
+   73  rm misc/#file1# 
+   74  git rm misc/#file1# 
+   75  git add misc/
+   76  git status
+   77  git commit "cambios en git"
+   78  git commit -m "Commit cambios en git"
+   79  git log 
+   80  git remote add origin https://github.com/ivevin/LSX2_ivindas.git
+   81  git remote -v
+   82  git remote add mirepo https://github.com/ivevin/LSX2_ivindas.git
+   83  git remote -v
+   84  git push -u origin master
+   85  git remote add mirepo https://github.com/ivevin/LXS2_ivindas.git
+   86  git remote remove origin
+   87  git remote remove mirepo
+   88  git remote -v
+   89  git remote add origin https://github.com/ivevin/LXS2_ivindas.git
+   90  git push -u origin master
+   91  cd /tmp/
+   92  clear
+   93  git clone -b master https://https://github.com/ivevin/LXS2_ivindas.git
+   94  git clone -b master https://github.com/ivevin/LXS2_ivindas.git
+   95  ls
+   96  git clone -b master https://github.com/ivevin/LXS2_ivindas.git MiRepoRemoto
+   97  ls
+   98  cd MiRepoRemoto/
+   99  tree
+  100  git log
+  101  cd ..
+  102  rm -R MiRepoRemoto/
+  103  sudo rm -R MiRepoRemoto/
+  104  ls
+  105  cd /home/ubuntu/LXS2/
+  106  mkdir history
+  107  ls
+  108  cd
+  109  pwd
+  110  ls -al
+  111  less .bash_history 
+  112  history | wc
+  113  wc .bash_history 
+  114  history | wc
+  115  wc .bash_history 
+  116  cd LXS2/
+  117  history > history/history_05072016
