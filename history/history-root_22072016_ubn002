@@ -1,0 +1,217 @@
+    1  fdisk -l
+    2  fdisk -l
+    3  netstat -ltunpa
+    4  apt-get install openssh
+    5  apt-get install openssh-server
+    6  netstat -ltunpa
+    7  netstat -ltunpa | grep LISTEN
+    8  apt-get install nmap
+    9  ip -4 addr
+   10  nmap 10.124.18.141
+   11  nmap 10.124.18.129
+   12  nmap 127.0.1.1
+   13  nmap localhost
+   14  cat /etc/hosts
+   15  man lvm
+   16  cd
+   17  fdisk -l
+   18  fdisk /dev/sda
+   19  reboot 
+   20  fdisk -l
+   21  apt-get install lvm2
+   22  pvcreate /dev/sda7
+   23  pvdisplay
+   24  pvcreate /dev/sda{8,9,10}
+   25  pvdisplay
+   26  vgcreate server01 /dev/sda7
+   27  vgdisplay 
+   28  vgcreate -s 16M server02 /dev/sda8 /dev/sda9
+   29  vgdisplay 
+   30  history 
+   31  vgextend server01 /dev/sda10
+   32  vgdisplay 
+   33  lvcreate man
+   34  lvcreate -L 500M -n data01 server01
+   35  lvcreate -L 200M server01
+   36  mkfs.ext4 /dev/server01/data01 
+   37  cd /mnt/
+   38  mkdir respaldos
+   39  mount /dev/server01/data01 /mnt/respaldos/
+   40  df
+   41  mount
+   42  init 0
+   43  history 
+   44  exit
+   45  git clone https://github.com/ivevin/LXS2_ivindas.git
+   46  ls
+   47  cd LXS2_ivindas/
+   48  ls
+   49  cd history/
+   50  ls
+   51  rm history_12072016_ubn002 
+   52  history 
+   53  history > history_12072016_$HOSTNAME
+   54  git status
+   55  git add history_12072016_ubn002 
+   56  git status
+   57  git commit -m "History de la clase de LVM parte 1"
+   58  git push origin master
+   59  git status
+   60  git log
+   61  cat history_12072016_ubn002 
+   62  cd
+   63  exit
+   64  history 
+   65  pwd
+   66  cd
+   67  pwd
+   68  ls -l
+   69  ls -al
+   70  history > /home/sysadmin/LXS2_ivindas/history/history-root_12072016_$HOSTNAME
+   71  ls /home/sysadmin/LXS2_ivindas/history/history-root_12072016_$HOSTNAME
+   72  ls -l /home/sysadmin/LXS2_ivindas/history/history-root_12072016_$HOSTNAME
+   73  chown sysadmin:sysadmin /home/sysadmin/LXS2_ivindas/history/history-root_12072016_$HOSTNAME
+   74  ls -l /home/sysadmin/LXS2_ivindas/history/history-root_12072016_$HOSTNAME
+   75  git status
+   76  git add /home/sysadmin/LXS2_ivindas/history/history-root_12072016_ubn002 
+   77  cd /home/sysadmin/LXS2_ivindas/history/
+   78  git add history-root_12072016_ubn002 
+   79  git status
+   80  git rm history_12072016_ubn002
+   81  git status
+   82  git commit -m "History de root de clase de LVM parte 1"
+   83  git status
+   84  git push origin master
+   85  cd
+   86  df
+   87  vgdisplay 
+   88  lvdisplay 
+   89  cd /mnt/
+   90  ls
+   91  df -h
+   92  mount
+   93  vgdisplay server01
+   94  vgdisplay
+   95  lvdisplay 
+   96  cd
+   97  lvextend -L +200M server01/data01
+   98  lvdisplay data01
+   99  lvdisplay
+  100  vgdisplay server01
+  101  lvdisplay
+  102  resize2fs -f /dev/server01/data01 
+  103  mount /dev/server01/data01 /mnt/respaldos/
+  104  df -h
+  105  mount
+  106  umount /mnt/respaldos/
+  107  ls /proc/cpuinfo 
+  108  less /proc/cpuinfo 
+  109  grep vmx /proc/cpuinfo
+  110  apt-get install qemu-kvm libvirt-bin bridge-utils virt-manager
+  111  id sysadmin
+  112  exit
+  113  cd
+  114  ls
+  115  cd /home/sysadmin/
+  116  ls
+  117  #git clone https://github.com/emvarg/LXS2_emvarg.git
+  118  cd /tmp/
+  119  git clone https://github.com/emvarg/LXS2_emvarg.git
+  120  ls -l
+  121  mkdir dev
+  122  ls
+  123  cd dev/
+  124  ls
+  125  git clone https://github.com/emvarg/LXS2_evargas.git
+  126  ls
+  127  cd LXS2_evargas/
+  128  ls
+  129  cd scripts/
+  130  ls
+  131  exit
+  132  mount /dev/server01/data01 /mnt/respaldos/
+  133  dxdf
+  134  df
+  135  cd /mnt/respaldos/
+  136  ls
+  137  mkdir folder-{1,2,3}
+  138  cd folder-1
+  139  touch folder-{1,2,3}/file-{a,b,c}
+  140  cd ..
+  141  touch folder-{1,2,3}/file-{a,b,c}
+  142  tree
+  143  lvcreate 
+  144  lvcreate -s -n snap-data01 -L 200M server01/data01
+  145  lvdisplay 
+  146  ls /dev/server01/
+  147  ls
+  148  mkdir folder-4
+  149  mkdir folder-5
+  150  touch folder-4/file-{m,n}
+  151  touch folder-5/file-{casa,perro}
+  152  tree
+  153  mount
+  154  df
+  155  umount data01
+  156  umount /mnt/respaldos/
+  157  cd
+  158  umount /mnt/respaldos/
+  159  lvdisplay 
+  160  lvconvert --merge /dev/server01/snap-data01 
+  161  df
+  162  umount /srv/por-respaldar/
+  163  lvconvert --merge /dev/server01/snap-data01 
+  164  df
+  165  apt-get install openssh-server
+  166  mount 
+  167  cd /srv/
+  168  ls
+  169  ls -l
+  170  history 
+  171  hsi
+  172  history 
+  173  lvdisplay 
+  174  history 
+  175  cd /srv/
+  176  mkdir respaldos
+  177  ls
+  178  mkdir por-respaldar
+  179  tree
+  180  mount /dev/server01/data01 por-respaldar/
+  181  df
+  182  mount /dev/server01/snap-data01 por-respaldar/
+  183  df
+  184  tree
+  185  tar -pczf data01-respaldo-15072016.tar.gz por-respaldar/
+  186  ls
+  187  scp data01-respaldo-15072016.tar.gz sysadmin@192.168.122.217:
+  188  dd if=/dev/server01/snap-data01 of=data01.img
+  189  umount por-respaldar/
+  190  lvconvert man
+  191  man lvconvert 
+  192  lvconvert --merge /dev/server01/snap-data01 
+  193  history > history-root_15072016_ubn002 
+  194  ls
+  195  ls -l
+  196  sudo chown sysadmin:sysadmin history-root_15072016_ubn002 
+  197  git status
+  198  git add history-root_15072016_ubn002 
+  199  git add history_15072016_ubn002 
+  200  git commit -m "history de clase de bash + final de LVM"
+  201  git push origin master
+  202  init 0
+  203  cd /dev/
+  204  cat input/mouse0 
+  205  cd /tmp/
+  206  ls
+  207  history > file1
+  208  ls -l
+  209  history > history-root_19072016_ubn002 
+  210  ls
+  211  pgrep firefox
+  212  ps -u
+  213  less /etc/passwd
+  214  ps -u mysql
+  215  less /etc/
+  216  ps -u sshd
+  217  history > history-root_22072016_ubn002 
