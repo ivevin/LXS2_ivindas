@@ -1,0 +1,34 @@
+    1  yum update
+    2  yum install lvm2*
+    3  df -T
+    4  fdisk /dev/sdb
+    5  vgdisplay 
+    6  lvdisplay 
+    7  vgdisplay > vgdisplay-antes
+    8  lvdisplay > lvdisplay-antes
+    9  fdisk -l /dev/sdb
+   10  pvcreate /dev/sdb1
+   11  pvs
+   12  mkfs.xfs /dev/sdb1
+   13  vgextend centos /dev/sdb1
+   14  vgs
+   15  pvscan
+   16  lvdisplay 
+   17  vgdisplay 
+   18  lvextend -l +265 /dev/centos/root 
+   19  resize2fs /dev/centos/root
+   20  cat /etc/fstab 
+   21  yum install xfsprogs.x86_64 --assumeyes
+   22  mount -t xfs /dev/sdb1 /mnt/
+   23  df -h
+   24  xfs_growfs /mnt/
+   25  lvdisplay 
+   26  lvdisplay | more
+   27  df -h
+   28  vgdisplay > vgdisplay-despues
+   29  lvdisplay > lvdisplay-despues
+   30  vgdisplay
+   31  lvdisplay 
+   32  ifco
+   33  ip addr
+   34  history > history
